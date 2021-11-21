@@ -15,9 +15,9 @@
 ##################################################################################
 # Crystal Clock - use 50MHz onboard oscillator
 NET "bf_clock" IOSTANDARD = LVCMOS33;
-NET "bf_clock" LOC = P89;
+NET "bf_clock" LOC = P126;
 NET "bf_clock" TNM_NET = "bf_clock";
-TIMESPEC TS_bf_clock = PERIOD "bf_clock" 31.25 ns HIGH 50%;
+TIMESPEC TS_bf_clock = PERIOD "bf_clock" 100 MHz HIGH 50 %;
 PIN "pll_wrapper/DCM_baseClock.CLKFX" TNM = "coreclk";
 
 # external Clock - use Auxiliary clock
@@ -38,13 +38,13 @@ NET "extClockOut" LOC = P78;
 NET "extTriggerOut" IOSTANDARD = LVCMOS33;
 NET "extTriggerOut" SLEW = FAST;
 NET "extTriggerOut" DRIVE = 8;
-NET "extTriggerOut" LOC = P63;
+NET "extTriggerOut" LOC = P87;
 
 #--Inside row numbering
 NET "indata[0]" IOSTANDARD = LVCMOS33;
 NET "indata[0]" SLEW = SLOW;
 NET "indata[0]" DRIVE = 2;
-NET "indata[0]" LOC = P18;
+NET "indata[0]" LOC = P102;
 NET "indata[1]" IOSTANDARD = LVCMOS33;
 NET "indata[1]" SLEW = SLOW;
 NET "indata[1]" DRIVE = 2;
@@ -68,7 +68,7 @@ NET "indata[5]" LOC = P40;
 NET "indata[6]" IOSTANDARD = LVCMOS33;
 NET "indata[6]" SLEW = SLOW;
 NET "indata[6]" DRIVE = 2;
-NET "indata[6]" LOC = P53;
+NET "indata[6]" LOC = P88;
 NET "indata[7]" IOSTANDARD = LVCMOS33;
 NET "indata[7]" SLEW = SLOW;
 NET "indata[7]" DRIVE = 2;
@@ -104,12 +104,12 @@ NET "indata[14]" LOC = P84;
 NET "indata[15]" IOSTANDARD = LVCMOS33;
 NET "indata[15]" SLEW = SLOW;
 NET "indata[15]" DRIVE = 2;
-NET "indata[15]" LOC = P86;
+NET "indata[15]" LOC = P105;
 
 NET "indata[16]" IOSTANDARD = LVCMOS33 | PULLDOWN;
 NET "indata[16]" SLEW = FAST;
 NET "indata[16]" DRIVE = 8;
-NET "indata[16]" LOC = P91;
+NET "indata[16]" LOC = P101;
 NET "indata[17]" IOSTANDARD = LVCMOS33 | PULLDOWN;
 NET "indata[17]" SLEW = FAST;
 NET "indata[17]" DRIVE = 8;
@@ -133,11 +133,11 @@ NET "indata[21]" LOC = P2;
 NET "indata[22]" IOSTANDARD = LVCMOS33 | PULLDOWN;
 NET "indata[22]" SLEW = FAST;
 NET "indata[22]" DRIVE = 8;
-NET "indata[22]" LOC = P3;
+NET "indata[22]" LOC = P100;
 NET "indata[23]" IOSTANDARD = LVCMOS33 | PULLDOWN;
 NET "indata[23]" SLEW = FAST;
 NET "indata[23]" DRIVE = 8;
-NET "indata[23]" LOC = P4;
+NET "indata[23]" LOC = P99;
 NET "indata[24]" IOSTANDARD = LVCMOS33 | PULLDOWN;
 NET "indata[24]" SLEW = FAST;
 NET "indata[24]" DRIVE = 8;
@@ -174,17 +174,17 @@ NET "indata[31]" LOC = P17;
 NET "armLEDnn" IOSTANDARD = LVCMOS33;
 NET "armLEDnn" SLEW = SLOW;
 NET "armLEDnn" DRIVE = 12;
-NET "armLEDnn" LOC = P25;
+NET "armLEDnn" LOC = P119;
 NET "triggerLEDnn" IOSTANDARD = LVCMOS33;
 NET "triggerLEDnn" SLEW = SLOW;
 NET "triggerLEDnn" DRIVE = 12;
-NET "triggerLEDnn" LOC = P34;
+NET "triggerLEDnn" LOC = P118;
 
 ## RS232
 NET "rx" IOSTANDARD = LVCMOS33;
-NET "rx" LOC = "P88";
+NET "rx" LOC = "P112";
 NET "tx" IOSTANDARD = LVCMOS33;
-NET "tx" LOC = "P90";
+NET "tx" LOC = "P111";
 
 
 ## SPI
